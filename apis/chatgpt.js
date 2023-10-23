@@ -37,8 +37,6 @@ async function chatWithOpenAI(userInput) {
   }
 }
 
-chatWithOpenAI("hello");
-
 module.exports = {
   chatWithOpenAI,
 }

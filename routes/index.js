@@ -25,8 +25,6 @@ router.post('/chat', async function (req, res, next) {
     const voice = req.body.voice
 
     const responseText = await chatWithOpenAI(userSpeech);
-    console.log('responseText')
-    console.log(responseText)
     const result = await textToSpeech(responseText, voice);
     return res.json(result)
   } catch (error) {
