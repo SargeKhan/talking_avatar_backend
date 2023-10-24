@@ -35,7 +35,7 @@ const textToSpeech = async (text, voice)=> {
         
         // if (filename) {
         let randomString = Math.random().toString(36).slice(2, 7);
-        let filename = `./public/speech-${randomString}.mp3`;
+        let filename = `./public/api/speech-${randomString}.mp3`;
         audioConfig = sdk.AudioConfig.fromAudioFileOutput(filename);
         // }
 

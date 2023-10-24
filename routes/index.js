@@ -4,7 +4,7 @@ var textToSpeech = require('../helpers/tts');
 const { chatWithOpenAI } = require('../apis/chatgpt');
 
 /* GET home page. */
-router.post('/talk', function(req, res, next) {
+router.post('/api/talk', function(req, res, next) {
 
   textToSpeech(req.body.text, req.body.voice)
   .then(result => {
@@ -17,7 +17,7 @@ router.post('/talk', function(req, res, next) {
 
 });
 
-router.post('/chat', async function (req, res, next) {
+router.post('/api/chat', async function (req, res, next) {
   try {
     console.log('req.body.user_speech')
     console.log(req.body.user_speech)
