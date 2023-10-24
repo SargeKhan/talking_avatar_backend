@@ -26,10 +26,7 @@ const textToSpeech = async (text, voice)=> {
     
     // convert callback function to promise
     return new Promise((resolve, reject) => {
-        
-
         let ssml = SSML.replace("__TEXT__", text);
-
         
         const speechConfig = sdk.SpeechConfig.fromSubscription(key, region);
         speechConfig.speechSynthesisOutputFormat = 5; // mp3
