@@ -4,16 +4,28 @@ Uses the [Azure APIs](https://learn.microsoft.com/en-us/azure/cognitive-services
 
 This is a simple ExpressJS app.
 
-### Get keys from Azure and create a `.env` in the root directory with
+# Set up the environment variables.
+Copy/rename the .env.template file to .env file. And enter the keys provided for all the variables. Which include:
+
+### Get keys from Azure
 ```
-AZURE_KEY=
-AZURE_REGION=
+AZURE_KEY=<enter the value>
+AZURE_REGION=<enter the value>
+```
+### OpenAI key
+```
+OPEN_AI_API_KEY=<enter the value>
 ```
 
 
 ### To run
-```
-$ npm install
-$ npm start
-```
+1- Install docker on the system (search internet).
+2- While in the project directory, build image
 
+```
+docker build -t avatar_backend .
+```
+3- Run docker
+```
+docker run -p 5001:5001 avatar_backend
+```
