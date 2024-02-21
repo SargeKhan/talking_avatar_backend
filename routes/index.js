@@ -5,7 +5,6 @@ const { chatWithOpenAI } = require('../apis/chatgpt');
 
 /* GET home page. */
 router.post('/api/talk', function(req, res, next) {
-
   textToSpeech(req.body.text, req.body.voice)
   .then(result => {
     res.json(result);    
@@ -13,8 +12,6 @@ router.post('/api/talk', function(req, res, next) {
   .catch(err => {
     res.json({});
   });
-
-
 });
 
 router.post('/api/chat', async function (req, res, next) {

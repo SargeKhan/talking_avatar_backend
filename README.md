@@ -16,16 +16,17 @@ AZURE_REGION=<enter the value>
 ```
 OPEN_AI_API_KEY=<enter the value>
 ```
-
+```
 
 ### To run
 1- Install docker on the system (search internet).
 2- While in the project directory, build image
 
-```
+```shell
 docker build -t avatar_backend .
 ```
 3- Run docker
-```
+```shell
 docker run -p 5001:5001 avatar_backend
 ```
+
